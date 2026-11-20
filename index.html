@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Baillart Academia de Dança | Agende sua aula experimental</title>
+<meta name="description" content="Ballet, Jazz, Hip Hop, Tap e Ginástica Rítmica dos 2 anos ao 40+. Agende sua aula experimental na Baillart Academia de Dança, em Fortaleza.">
+<meta name="theme-color" content="#ff3d9a">
+<link rel="canonical" href="https://baillartacademia.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Baillart Academia de Dança">
+<meta property="og:title" content="Baillart Academia de Dança">
+<meta property="og:description" content="Agende sua aula experimental. Aqui a felicidade tem ritmo.">
+<meta property="og:url" content="https://baillartacademia.vercel.app/">
+<meta property="og:image" content="https://baillartacademia.vercel.app/img/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://baillartacademia.vercel.app/img/og-image.jpg">
+<link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/icon-512.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/antonio-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/sacramento-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Antonio';src:url(fonts/antonio-latin-200-normal.woff2) format('woff2');font-weight:200;font-display:swap}
+@font-face{font-family:'Antonio';src:url(fonts/antonio-latin-300-normal.woff2) format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Antonio';src:url(fonts/antonio-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Antonio';src:url(fonts/antonio-latin-600-normal.woff2) format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Lobster Two';src:url(fonts/lobster-two-latin-700-italic.woff2) format('woff2');font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:'Sacramento';src:url(fonts/sacramento-latin-400-normal.woff2) format('woff2');font-display:swap}
+@font-face{font-family:'Red Hat Display';src:url(fonts/red-hat-display-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Red Hat Display';src:url(fonts/red-hat-display-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Red Hat Display';src:url(fonts/red-hat-display-latin-700-normal.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Red Hat Display';src:url(fonts/red-hat-display-latin-900-normal.woff2) format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'Red Hat Display';src:url(fonts/red-hat-display-latin-900-italic.woff2) format('woff2');font-weight:900;font-style:italic;font-display:swap}
+
+:root{
+  --pink:#ff3d9a;--pink-2:#ff6db3;--magenta:#c0139b;--ink:#1d1d1d;--paper:#e4e4e4;--soft:#fde7f2;--white:#fff;
+  --shadow:0 20px 44px -22px rgba(192,19,155,.55);
+  --script:'Sacramento',cursive;--bold:'Lobster Two',cursive;--cond:'Antonio',sans-serif;--sans:'Red Hat Display',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper) url(img/texture.jpg) center/640px repeat;min-height:100vh;overflow-x:hidden}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+a{color:inherit}
+.container{max-width:1120px;margin:0 auto;padding:0 18px}
+
+/* ---------- logo ---------- */
+.ba{display:block;overflow:visible}
+.ba .l{fill:var(--l,#1d1d1d)}
+.ba .s1{fill:var(--s1,#ff4fa3)}
+.ba .s2{fill:var(--s2,#c0139b)}
+.ba.white{--l:#fff;--s1:#141414;--s2:#c5049a}
+.ba .lb .s1{transform:translateY(40px)}.ba .lb .s2{transform:translateY(95px)}
+.ba .la .s1{transform:translateY(-40px)}.ba .la .s2{transform:translateY(-95px)}
+.ba.play .lb{animation:dropB .8s cubic-bezier(.2,1.3,.4,1) both}
+.ba.play .la{animation:riseA .8s .12s cubic-bezier(.2,1.3,.4,1) both}
+.ba.play .lb .s1{animation:exB1 .55s .7s cubic-bezier(.2,1,.3,1) both}
+.ba.play .lb .s2{animation:exB2 .6s .85s cubic-bezier(.2,1,.3,1) both}
+.ba.play .la .s1{animation:exA1 .55s .78s cubic-bezier(.2,1,.3,1) both}
+.ba.play .la .s2{animation:exA2 .6s .93s cubic-bezier(.2,1,.3,1) both}
+.ba.dance .lb{animation:bobB 3.6s 1.8s ease-in-out infinite}
+.ba.dance .la{animation:bobA 3.6s 1.8s ease-in-out infinite}
+@keyframes dropB{from{transform:translateY(-120%);opacity:0}to{transform:none;opacity:1}}
+@keyframes riseA{from{transform:translateY(120%);opacity:0}to{transform:none;opacity:1}}
+@keyframes exB1{from{transform:translateY(0)}to{transform:translateY(40px)}}
+@keyframes exB2{from{transform:translateY(0)}to{transform:translateY(95px)}}
+@keyframes exA1{from{transform:translateY(0)}to{transform:translateY(-40px)}}
+@keyframes exA2{from{transform:translateY(0)}to{transform:translateY(-95px)}}
+@keyframes bobB{0%,100%{transform:none}25%{transform:translateY(-14px)}50%{transform:none}}
+@keyframes bobA{0%,100%{transform:none}50%{transform:none}75%{transform:translateY(14px)}}
+
+/* ---------- abertura (cortina) ---------- */
+.intro{position:fixed;inset:0;z-index:100;display:grid;place-items:center;pointer-events:auto}
+.intro .cur{position:absolute;top:0;bottom:0;width:50.5%;background:#ff4fa3 url(img/texture.jpg) center/640px;background-blend-mode:multiply;transition:transform 1s cubic-bezier(.7,0,.2,1)}
+.intro .cur.l{left:0;box-shadow:inset -30px 0 40px -30px rgba(120,0,80,.35)}
+.intro .cur.r{right:0;box-shadow:inset 30px 0 40px -30px rgba(120,0,80,.35)}
+.intro .cur::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 30px,rgba(120,0,80,.035) 30px 60px)}
+.intro .mid{position:relative;z-index:2;text-align:center;transition:opacity .45s,transform .6s}
+.intro .ba{width:min(34vw,150px);margin:0 auto}
+.intro .t{font-family:var(--script);color:#fff;font-size:clamp(34px,9vw,52px);margin-top:14px;opacity:0;animation:fadeUp .7s 1.3s forwards}
+.intro.open .cur.l{transform:translateX(-102%)}
+.intro.open .cur.r{transform:translateX(102%)}
+.intro.open .mid{opacity:0;transform:scale(.9)}
+.intro.gone{display:none}
+
+/* ---------- ornamentos ---------- */
+.orn{height:92px;background:url(img/orn-top.png) 0 0/auto 100% repeat-x;animation:sway 80s linear infinite;pointer-events:none}
+.orn.bottom{background-image:url(img/orn-bottom.png);background-position:0 100%;animation-direction:reverse}
+@keyframes sway{to{background-position-x:-1188px}}
+
+/* ---------- topo ---------- */
+.top{display:grid;gap:22px;padding-top:6px}
+.hero{text-align:center}
+.hero .ba{width:92px;margin:0 auto}
+.flourish{width:150px;margin:20px auto 10px;opacity:.85}
+.brand{font-family:var(--cond);font-weight:300;font-size:52px;letter-spacing:6px;text-transform:uppercase;line-height:1}
+.brand-sub{font-family:var(--script);color:var(--pink);font-size:44px;line-height:1;margin-top:2px}
+.motto{font-size:14px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:#666;margin-top:12px}
+
+.ribbons{position:relative;height:104px;margin:22px -18px 0;overflow:hidden}
+.rib{position:absolute;left:-5%;width:110%;white-space:nowrap;overflow:hidden;padding:9px 0}
+.rib .track{display:inline-flex;align-items:center;gap:22px;animation:marq 26s linear infinite;padding-right:22px}
+.rib span{font-family:var(--cond);font-weight:400;font-size:22px;letter-spacing:2px;text-transform:uppercase}
+.rib i{width:9px;height:9px;transform:rotate(45deg);display:inline-block}
+.rib.a{top:12px;background:var(--pink);color:#fff;transform:rotate(-3deg);box-shadow:0 10px 24px -14px rgba(192,19,155,.8)}
+.rib.a i{background:#fff}
+.rib.b{top:52px;background:var(--ink);color:#fff;transform:rotate(2deg)}
+.rib.b .track{animation-direction:reverse;animation-duration:30s}
+.rib.b i{background:var(--pink)}
+.rib.b b{font-family:var(--script);font-weight:400;font-size:30px;color:var(--pink-2);text-transform:none;letter-spacing:0;line-height:.8}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- card formulário ---------- */
+.booking{border-radius:30px;overflow:hidden;background:#fff;box-shadow:var(--shadow);position:relative;scroll-margin-top:16px}
+.bk-photo{position:relative;aspect-ratio:3/2.15;overflow:hidden}
+.bk-photo > img{width:100%;height:100%;object-fit:cover;object-position:center 20%;animation:kb 16s ease-in-out infinite alternate;transform-origin:30% 20%}
+.bk-photo::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(255,61,154,.97) 0%,rgba(255,61,154,.75) 22%,rgba(255,61,154,0) 52%)}
+.bk-photo .txt{position:absolute;z-index:2;bottom:14px;left:0;right:0;text-align:center;color:#fff;padding:0 18px}
+.bk-photo .txt img{display:none}
+.bk-photo h1{font-family:var(--cond);font-weight:300;text-transform:uppercase;font-size:32px;line-height:1;letter-spacing:1px;text-shadow:0 2px 12px rgba(150,0,90,.35)}
+.bk-photo h1 em{display:block;font-family:var(--script);font-style:normal;text-transform:none;font-size:44px;letter-spacing:0;margin-top:2px}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.07)}}
+.progress{height:6px;background:var(--soft)}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--magenta),var(--pink));transition:width .45s cubic-bezier(.3,.9,.3,1)}
+.form-body{padding:22px 20px 22px;min-height:330px;position:relative}
+.step{display:none}
+.step.on{display:block;animation:slide .45s cubic-bezier(.2,.9,.3,1) both}
+.step.back{animation-name:slideBack}
+.q-label{font-family:var(--script);font-size:30px;color:var(--pink);line-height:1}
+.q{font-family:var(--cond);font-weight:400;text-transform:uppercase;font-size:30px;line-height:1.05;margin:2px 0 16px}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chips.one{grid-template-columns:1fr}
+.chip{background:var(--soft);border:2px solid transparent;border-radius:16px;padding:15px 14px;font-weight:700;font-size:16px;text-align:left;transition:transform .15s,background .2s,border-color .2s,color .2s}
+.chip:hover{border-color:var(--pink-2)}
+.chip:active{transform:scale(.96)}
+.chip.sel{background:var(--pink);color:#fff;border-color:var(--magenta);animation:chipPop .35s ease}
+.field{display:block;margin-bottom:14px}
+.field[hidden]{display:none}
+.field span{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.field input{width:100%;font:inherit;font-size:17px;font-weight:500;padding:15px 16px;border-radius:14px;border:2px solid #eee;background:#fafafa;outline:none;transition:border-color .2s,background .2s}
+.field input:focus{border-color:var(--pink);background:#fff}
+.field input.err{border-color:#e0245e;background:#fff3f7}
+.summary{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.summary span{font-size:12px;font-weight:700;background:var(--soft);color:var(--magenta);padding:5px 10px;border-radius:99px}
+.nav{display:flex;align-items:center;justify-content:space-between;margin-top:16px;min-height:24px}
+.back-btn{font-weight:700;font-size:14px;color:#888}
+.back-btn[hidden]{visibility:hidden;display:block}
+.count{font-size:13px;font-weight:700;color:#aaa}
+.note{font-size:12.5px;color:#888;text-align:center;margin-top:10px}
+
+/* botões com brilho */
+.btn{position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;text-decoration:none;background:var(--pink);color:#fff;font-weight:900;font-size:17px;padding:18px 20px;border-radius:16px;box-shadow:0 12px 26px -14px rgba(192,19,155,.9),inset 0 -3px 0 rgba(0,0,0,.12);transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px -14px rgba(192,19,155,.95),inset 0 -3px 0 rgba(0,0,0,.12)}
+.btn:active{transform:scale(.97)}
+.btn::after{content:"";position:absolute;z-index:-1;top:-20%;bottom:-20%;width:42%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg);animation:shine 2.8s ease-in-out infinite}
+.btn.mag{background:var(--magenta);box-shadow:0 12px 26px -14px rgba(120,0,90,.9)}
+#copy{transition:background .3s,transform .15s}
+#copy.copied-ok{background:#1fa855;box-shadow:0 12px 26px -14px rgba(20,120,60,.9)}
+.btn.dark{background:var(--ink);box-shadow:0 12px 26px -14px rgba(0,0,0,.8)}
+.btn.green{background:#1fa855;box-shadow:0 12px 26px -14px rgba(20,120,60,.9)}
+.btn.ghost{background:#fff;color:var(--ink);box-shadow:0 2px 0 rgba(0,0,0,.06)}
+.btn.ghost::after{background:linear-gradient(100deg,transparent,rgba(255,61,154,.18),transparent)}
+.btn[disabled]{opacity:.65;pointer-events:none}
+@keyframes shine{0%,55%{left:-60%}100%{left:130%}}
+
+.done{text-align:center;padding:6px 0}
+.done .check{width:78px;height:78px;margin:6px auto 12px;border-radius:50%;background:#1fa855;display:grid;place-items:center;box-shadow:0 12px 24px -10px rgba(20,120,60,.7);animation:pop .6s cubic-bezier(.2,1.5,.4,1) both}
+.done .tick{stroke-dasharray:24;stroke-dashoffset:24;animation:draw .5s .35s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.done h3{font-family:var(--cond);font-weight:400;text-transform:uppercase;font-size:30px;letter-spacing:1px}
+.done p{margin:10px 0 18px;font-size:15.5px;line-height:1.45}
+
+.hours{margin-top:14px}
+.hours .btn{justify-content:space-between;font-size:16px;padding:16px 18px}
+.hours .btn small{display:block;font-weight:500;font-size:13px;color:#777}
+.hours .btn .wa-mini{width:30px;height:30px;flex:0 0 30px}
+
+/* ---------- títulos ---------- */
+.sec{margin-top:58px}
+.title{text-align:center}
+.title .k{font-family:var(--cond);font-weight:300;text-transform:uppercase;font-size:40px;letter-spacing:2px;line-height:1}
+.title .s{font-family:var(--script);color:var(--pink);font-size:46px;line-height:.9}
+.title p{font-size:14.5px;color:#555;margin-top:10px}
+
+/* ---------- carrossel de modalidades ---------- */
+.stage{position:relative;margin-top:18px;padding:26px 0 30px;overflow:hidden}
+.bigword{position:absolute;top:50%;left:0;transform:translateY(-50%);white-space:nowrap;font-family:var(--cond);font-weight:600;text-transform:uppercase;font-size:150px;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,61,154,.35);pointer-events:none}
+.bigword .track{display:inline-block;animation:marq 40s linear infinite reverse}
+.carousel{position:relative;display:flex;width:max-content;gap:18px;padding-right:18px!important;animation:marq 38s linear infinite;padding:10px 0}
+.mod{flex:0 0 auto;width:230px;background:#fff;padding:10px 10px 14px;border-radius:20px;box-shadow:var(--shadow);text-align:center;user-select:none}
+.mod:nth-child(odd){transform:rotate(-3deg)}
+.mod:nth-child(even){transform:rotate(2.5deg) translateY(14px)}
+.mod .ph{border-radius:14px;overflow:hidden;aspect-ratio:4/5;background:#ddd}
+.mod .ph img{width:100%;height:100%;object-fit:cover}
+.mod b{display:block;font-family:var(--cond);font-weight:400;text-transform:uppercase;font-size:26px;letter-spacing:1px;margin-top:10px}
+.mod small{display:block;font-family:var(--script);color:var(--pink);font-size:25px;line-height:.9}
+.tip{text-align:center;font-size:13px;color:#777;margin-top:4px}
+
+/* ---------- depoimentos ---------- */
+.reviews{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px 18px 12px;margin:0 -18px;scrollbar-width:none}
+.reviews::-webkit-scrollbar{display:none}
+.rv{flex:0 0 82%;max-width:360px;scroll-snap-align:center;background:#fff;border-radius:20px;padding:10px;box-shadow:var(--shadow)}
+.rv img{width:100%;border-radius:12px}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:8px}
+.dots i{width:7px;height:7px;border-radius:99px;background:#c9c9c9;transition:all .3s}
+.dots i.on{width:22px;background:var(--pink)}
+
+/* ---------- peça final ---------- */
+.finale{margin-top:58px}
+.piece{position:relative;border-radius:30px;overflow:hidden;background:#ff4fa3 url(img/texture.jpg) center/640px;background-blend-mode:multiply;box-shadow:var(--shadow);padding:30px 22px 34px;display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"copy copy" "duo wall";gap:0 14px}
+.piece .copy{grid-area:copy;text-align:center;color:#fff;margin-bottom:24px}
+.piece .flr{width:130px;margin:0 auto 6px;filter:invert(1)}
+.piece h2{font-family:var(--script);font-weight:400;font-size:50px;line-height:.95}
+.piece p{font-size:15.5px;line-height:1.5;margin-top:10px;font-weight:500}
+.pc{background:#fff;padding:8px 8px 26px;border-radius:6px;box-shadow:0 18px 30px -16px rgba(80,0,50,.6)}
+.pc img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.pc.duo{grid-area:duo;transform:rotate(-4deg)}
+.pc.duo img{object-position:center 8%}
+.pc.wall{grid-area:wall;transform:rotate(3.5deg) translateY(18px)}
+.finale > .btn{margin-top:22px}
+/* ---------- endereço ---------- */
+.place{margin-top:58px;display:grid;gap:16px}
+.map{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:#f3d3e4;height:190px;position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85)}
+.addr{background:#fff;border-radius:26px;padding:22px 20px;box-shadow:var(--shadow);text-align:center}
+.addr .k{font-family:var(--cond);font-weight:300;text-transform:uppercase;font-size:30px;letter-spacing:2px;line-height:1}
+.addr .s{font-family:var(--script);color:var(--pink);font-size:32px;line-height:.9}
+.addr address{font-style:normal;font-size:14px;line-height:1.5;margin:12px 0 16px;color:#444}
+.addr .row{display:grid;grid-template-columns:1fr;gap:10px;max-width:320px;margin:0 auto;width:100%}
+.addr .btn{font-size:15px;padding:15px 12px}
+.copied{display:block;height:18px;font-size:13px;font-weight:700;color:var(--magenta);margin-top:10px;opacity:0;transition:opacity .3s}
+.copied.on{opacity:1}
+
+footer{text-align:center;margin-top:50px}
+footer .ba{width:58px;margin:0 auto}
+footer p{font-size:13.5px;color:#666;margin:14px 0 22px;line-height:1.6}
+footer .ig{display:inline-block;margin:12px 0 26px;font-weight:700;font-size:15px;color:var(--magenta);text-decoration:none;letter-spacing:.3px}
+
+/* ---------- WhatsApp flutuante ---------- */
+.wa{position:fixed;right:14px;bottom:16px;z-index:40;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.wa-btn{width:48px;height:48px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.35);transition:transform .2s}
+.wa-btn:hover{transform:scale(1.06)}
+.wa-menu{background:#fff;border-radius:18px;box-shadow:0 18px 40px -12px rgba(0,0,0,.3);padding:8px;width:250px;transform-origin:bottom right;transform:scale(.6) translateY(20px);opacity:0;pointer-events:none;transition:all .25s cubic-bezier(.2,1.3,.4,1)}
+.wa.open .wa-menu{transform:none;opacity:1;pointer-events:auto}
+.wa-menu .h{font-size:12.5px;color:#888;padding:6px 10px 4px}
+.wa-menu a{display:block;text-decoration:none;font-weight:700;font-size:15px;padding:12px 10px;border-radius:12px}
+.wa-menu a:hover{background:#eefaf2}
+@keyframes ring{0%{transform:scale(1);opacity:.6}80%,100%{transform:scale(1.5);opacity:0}}
+
+/* ---------- lembrete ---------- */
+.nudge{position:fixed;left:16px;bottom:18px;z-index:39;max-width:calc(100% - 100px);width:300px;background:#fff;border-radius:18px;padding:12px 12px 12px 14px;box-shadow:0 18px 40px -12px rgba(192,19,155,.5);display:flex;align-items:center;gap:12px;transform:translateY(160%);transition:transform .55s cubic-bezier(.2,1.3,.4,1)}
+.nudge.show{transform:none}
+.nudge .ba{width:30px;flex:0 0 30px}
+.nudge p{font-size:13.5px;line-height:1.3;flex:1}
+.nudge p b{display:block;font-family:var(--script);font-weight:400;color:var(--pink);font-size:24px;line-height:.9}
+.nudge a{font-weight:900;color:var(--pink);text-decoration:none;font-size:14px;white-space:nowrap}
+.nudge .x{position:absolute;top:-8px;right:-8px;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-size:13px;line-height:24px}
+
+/* ---------- entrada ---------- */
+.rv-in{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.9,.3,1)}
+.rv-in.vis{opacity:1;transform:none}
+body.loading .hero > *,body.loading .booking{opacity:0}
+.enter .hero > *{animation:fadeUp .8s cubic-bezier(.2,.9,.3,1) both}
+.enter .hero > :nth-child(2){animation-delay:.08s}.enter .hero > :nth-child(3){animation-delay:.16s}.enter .hero > :nth-child(4){animation-delay:.24s}.enter .hero > :nth-child(5){animation-delay:.32s}.enter .hero > :nth-child(6){animation-delay:.4s}
+.enter .booking{animation:fadeUp .9s .35s cubic-bezier(.2,.9,.3,1) both}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes pop{0%{transform:scale(.4);opacity:0}100%{transform:none;opacity:1}}
+@keyframes slide{from{opacity:0;transform:translateX(34px)}to{opacity:1;transform:none}}
+@keyframes slideBack{from{opacity:0;transform:translateX(-34px)}to{opacity:1;transform:none}}
+@keyframes chipPop{40%{transform:scale(1.06)}}
+@keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+.shake{animation:shake .4s}
+
+/* ---------- desktop ---------- */
+@media (min-width:960px){
+  .orn{height:130px}
+  .top{grid-template-columns:1fr 470px;align-items:center;gap:60px;padding-top:10px}
+  .hero .ba{width:120px}
+  .brand{font-size:72px;letter-spacing:9px}
+  .brand-sub{font-size:62px}
+  .ribbons{margin:30px 0 0;border-radius:6px}
+  .hours{max-width:420px;margin:18px auto 0}
+  .title .k{font-size:54px}.title .s{font-size:60px}
+  .mod{width:270px}
+  .bigword{font-size:220px}
+  .piece{grid-template-columns:1fr 1fr 1.2fr;grid-template-areas:"duo wall copy";gap:0 26px;padding:50px 50px 60px;align-items:center}
+  .piece .copy{margin:0;text-align:left}.piece .flr{margin:0 0 8px}
+  .piece h2{font-size:80px}.piece p{font-size:18px}
+  .finale > .btn{width:auto;max-width:360px;margin:26px auto 0}
+  .place{grid-template-columns:1.4fr 1fr;align-items:stretch}
+  .map{height:300px}
+  .addr{display:flex;flex-direction:column;justify-content:center}
+  .rv{flex-basis:320px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv-in{opacity:1;transform:none}.intro{display:none}}
+</style>
+</head>
+<body class="loading">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><path id="pB" fill-rule="evenodd" d="M 295.539 153.957 C 293.849 155.824, 293.799 169.325, 294.452 447.207 C 294.829 607.418, 295.094 743.626, 295.041 749.891 C 294.909 765.561, 294.384 765.109, 311.880 764.368 C 319.371 764.050, 326.175 763.814, 327 763.843 C 328.798 763.905, 375.637 763.939, 378.500 763.880 C 379.600 763.857, 388.375 763.906, 398 763.988 C 407.625 764.071, 418.650 763.834, 422.500 763.462 C 428.970 762.837, 431.118 762.782, 437.250 763.083 C 442.928 763.361, 456.201 761.777, 458.594 760.536 C 460.054 759.778, 461.870 759.396, 462.628 759.688 C 463.387 759.979, 466.026 759.268, 468.493 758.108 C 470.960 756.949, 474.376 756, 476.085 756 C 477.793 756, 480.386 755.370, 481.846 754.600 C 483.306 753.830, 487.584 751.693, 491.354 749.850 C 507.717 741.852, 518.907 726.348, 523.361 705.500 C 524.301 701.100, 525.577 695.475, 526.196 693 C 527.323 688.497, 528.578 513.028, 527.516 508.394 C 527.251 507.236, 522.639 502.659, 517.267 498.224 C 466.626 456.412, 467.941 457.644, 467.777 451.866 C 467.670 448.099, 470.849 444.893, 491.287 428.154 C 511.467 411.626, 515.313 408.356, 521.655 402.340 L 527.810 396.500 527.655 311 C 527.502 226.834, 527.466 225.350, 525.305 215.908 C 519.509 190.578, 507.591 174.289, 487.907 164.794 C 465.497 153.984, 445.350 152.049, 354.905 152.019 C 298.989 152.001, 297.258 152.057, 295.539 153.957 M 408.886 234.765 C 390.721 235.021, 389.139 235.189, 387.458 237.046 C 385.733 238.953, 385.655 243.150, 385.871 323.250 C 386.075 398.964, 386.259 407.629, 387.704 409.225 C 389.148 410.821, 391.497 411, 411 411 C 431.313 411, 432.803 410.875, 434.474 409.029 C 437.171 406.048, 436.914 239.461, 434.208 236.855 C 431.803 234.538, 430.808 234.456, 408.886 234.765 M 387.236 495.291 C 385.629 497.067, 385.491 501.937, 385.377 560.855 C 385.309 595.860, 385.131 629.225, 384.982 635 C 384.832 640.775, 384.808 652.998, 384.929 662.162 C 385.196 682.417, 384.956 682.014, 397.213 682.718 C 401.771 682.980, 406.175 683.149, 407 683.094 C 414.798 682.572, 425.278 682.642, 425.634 683.217 C 426.395 684.449, 432.403 682.843, 434.500 680.847 C 436.473 678.969, 436.498 677.738, 436.357 588.357 C 436.215 498.526, 436.197 497.753, 434.169 495.724 C 432.245 493.800, 430.840 493.669, 410.548 493.526 C 390.439 493.383, 388.855 493.503, 387.236 495.291"/><path id="pA" fill-rule="evenodd" d="M 580.423 337.085 C 578.810 338.868, 578.484 341.158, 578.182 352.835 C 577.988 360.351, 577.238 379.775, 576.515 396 C 575.792 412.225, 574.924 433.600, 574.586 443.500 C 574.247 453.400, 573.541 470.725, 573.016 482 C 570.029 546.171, 568.391 591.164, 567.992 620 C 567.920 625.225, 567.236 638.050, 566.472 648.500 C 565.708 658.950, 564.788 676.725, 564.428 688 C 564.067 699.275, 563.538 713.450, 563.253 719.500 C 562.967 725.550, 562.547 737.250, 562.320 745.500 C 561.588 772.131, 561.307 780.242, 560.621 794.500 C 560.250 802.200, 559.779 817.050, 559.574 827.500 C 559.368 837.950, 558.711 855.950, 558.113 867.500 C 557.515 879.050, 556.828 895.250, 556.587 903.500 C 556.346 911.750, 555.928 919.175, 555.658 920 C 555.388 920.825, 554.925 926.078, 554.630 931.674 C 553.847 946.511, 554.078 946.730, 570.740 946.988 C 628.050 947.876, 644.029 947.625, 645.669 945.813 C 647.062 944.275, 647.344 939.781, 647.714 913.264 C 647.950 896.344, 648.302 876.425, 648.496 869 C 648.691 861.575, 649.097 841.100, 649.401 823.500 C 649.704 805.900, 650.225 789.399, 650.559 786.830 C 651.516 779.466, 652.342 779.119, 669.702 778.788 C 684.624 778.504, 684.867 778.534, 687.482 780.987 L 690.133 783.473 689.988 799.487 C 689.819 818.330, 690.906 886.399, 691.539 896.500 C 691.780 900.350, 692.192 912.673, 692.455 923.885 C 692.846 940.531, 693.222 944.587, 694.504 946.004 C 695.950 947.602, 699.141 947.722, 734.787 947.513 C 756.079 947.388, 774.282 946.951, 775.237 946.541 C 776.193 946.131, 778.294 946.255, 779.905 946.817 C 782.288 947.648, 783.129 947.515, 784.402 946.108 C 785.790 944.575, 785.853 941.880, 784.955 922.439 C 784.398 910.373, 783.728 897.575, 783.466 894 C 783.205 890.425, 782.770 878.725, 782.499 868 C 782.228 857.275, 781.557 842.650, 781.008 835.500 C 780.458 828.350, 780.228 821.375, 780.497 820 C 780.766 818.625, 780.573 816.150, 780.069 814.500 C 779.565 812.850, 778.853 801.150, 778.487 788.500 C 777.530 755.465, 777.307 749.146, 776.546 733.500 C 776.171 725.800, 775.729 712.975, 775.564 705 C 775.398 697.025, 774.963 688.025, 774.597 685 C 773.969 679.813, 773.746 672.634, 772.577 620 C 772.314 608.175, 771.790 596.475, 771.413 594 C 770.571 588.487, 769.751 568.155, 768.550 523 C 768.221 510.625, 767.467 497.718, 766.875 494.317 C 766.283 490.917, 766.074 487.689, 766.411 487.145 C 766.995 486.200, 765.775 451.329, 762.454 374.040 C 761.172 344.210, 760.673 338.296, 759.310 336.790 C 757.777 335.096, 752.996 335, 670 335 C 582.382 335, 582.308 335.002, 580.423 337.085 M 661.764 419.750 C 660.461 421.225, 660.052 428.023, 659.164 463 C 658.584 485.825, 657.847 512.375, 657.526 522 C 656.688 547.151, 655.950 576.266, 655.523 601 C 655.319 612.825, 654.756 626.775, 654.272 632 C 653.789 637.225, 653.652 642.807, 653.968 644.405 C 654.285 646.003, 654.183 651.628, 653.742 656.905 C 653.302 662.182, 653.103 672.455, 653.300 679.732 C 653.783 697.586, 653.258 697.057, 670.158 696.691 C 688.103 696.302, 687.616 696.885, 686.337 677.320 C 685.804 669.169, 685.474 660.250, 685.604 657.500 C 686.173 645.419, 686.125 642.827, 685.111 631 C 684.101 619.205, 682.829 570.270, 682.409 527 C 682.305 516.275, 681.740 494.225, 681.154 478 C 680.567 461.775, 679.956 442.584, 679.794 435.354 C 679.428 418.989, 678.841 418, 669.500 418 C 664.860 418, 662.923 418.438, 661.764 419.750"/></defs></svg>
+
+<!-- abertura -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="cur l"></div><div class="cur r"></div>
+  <div class="mid"><svg class="ba white" viewBox="288 148 504 806" aria-label="Baillart" role="img"><g class="lb"><use href="#pB" class="s2"/><use href="#pB" class="s1"/><use href="#pB" class="l"/></g><g class="la"><use href="#pA" class="s2"/><use href="#pA" class="s1"/><use href="#pA" class="l"/></g></svg><div class="t">Aqui a felicidade tem ritmo</div></div>
+</div>
+
+<div class="orn" aria-hidden="true"></div>
+
+<main class="container">
+  <div class="top">
+    <header class="hero">
+      <svg class="ba " viewBox="288 148 504 806" aria-label="Baillart" role="img"><g class="lb"><use href="#pB" class="s2"/><use href="#pB" class="s1"/><use href="#pB" class="l"/></g><g class="la"><use href="#pA" class="s2"/><use href="#pA" class="s1"/><use href="#pA" class="l"/></g></svg>
+      <img class="flourish" src="img/flourish.png" alt="" aria-hidden="true">
+      <div class="brand">Baillart</div>
+      <div class="brand-sub">Academia de Dança</div>
+      <div class="ribbons" aria-label="Ballet, Jazz, Hip Hop, Tap e Ginástica Rítmica, dos 2 anos ao 40+">
+        <div class="rib a"><div class="track"><span>Ballet</span><i></i><span>Jazz</span><i></i><span>Hip Hop</span><i></i><span>Tap</span><i></i><span>Ginástica Rítmica</span><i></i><span>Ballet</span><i></i><span>Jazz</span><i></i><span>Hip Hop</span><i></i><span>Tap</span><i></i><span>Ginástica Rítmica</span><i></i><span>Ballet</span><i></i><span>Jazz</span><i></i><span>Hip Hop</span><i></i><span>Tap</span><i></i><span>Ginástica Rítmica</span><i></i><span>Ballet</span><i></i><span>Jazz</span><i></i><span>Hip Hop</span><i></i><span>Tap</span><i></i><span>Ginástica Rítmica</span><i></i></div></div>
+        <div class="rib b"><div class="track"><span>Dos 2 anos ao 40+</span><i></i><b>Aqui a felicidade tem ritmo</b><i></i><span>Agende sua aula experimental</span><i></i><span>Dos 2 anos ao 40+</span><i></i><b>Aqui a felicidade tem ritmo</b><i></i><span>Agende sua aula experimental</span><i></i><span>Dos 2 anos ao 40+</span><i></i><b>Aqui a felicidade tem ritmo</b><i></i><span>Agende sua aula experimental</span><i></i><span>Dos 2 anos ao 40+</span><i></i><b>Aqui a felicidade tem ritmo</b><i></i><span>Agende sua aula experimental</span><i></i></div></div>
+      </div>
+    </header>
+
+    <div>
+      <!-- formulário -->
+      <section class="booking" id="agendar">
+        <div class="bk-photo">
+          <img src="img/aula-experimental.jpg" alt="Alunas da Baillart em aula de ballet na barra">
+          <div class="txt">
+            <img src="img/flourish.png" alt="" aria-hidden="true">
+            <h1>Agende sua<em>aula experimental</em></h1>
+          </div>
+        </div>
+        <div class="progress"><span id="bar"></span></div>
+
+        <form class="form-body" id="form" novalidate>
+          <div class="step on" data-step="1">
+            <div class="q-label">Primeiro passo</div>
+            <div class="q">A aula é para quem?</div>
+            <div class="chips one" data-field="para">
+              <button type="button" class="chip" data-v="Para mim">Para mim</button>
+              <button type="button" class="chip" data-v="Para meu filho(a)">Para meu filho(a)</button>
+              <button type="button" class="chip" data-v="Para mim e meu filho(a)">Para mim e meu filho(a)</button>
+            </div>
+          </div>
+          <div class="step" data-step="2">
+            <div class="q-label">Segundo passo</div>
+            <div class="q">Qual dança combina com você?</div>
+            <div class="chips" data-field="modalidade">
+              <button type="button" class="chip" data-v="Ballet">Ballet</button>
+              <button type="button" class="chip" data-v="Jazz">Jazz</button>
+              <button type="button" class="chip" data-v="Hip Hop">Hip Hop</button>
+              <button type="button" class="chip" data-v="Tap (Sapateado)">Tap</button>
+              <button type="button" class="chip" data-v="Ginástica Rítmica">Ginástica Rítmica</button>
+              <button type="button" class="chip" data-v="Ainda não sei">Ainda não sei</button>
+            </div>
+          </div>
+          <div class="step" data-step="3">
+            <div class="q-label">Terceiro passo</div>
+            <div class="q" id="q-idade">Qual a idade?</div>
+            <div class="chips" data-field="idade">
+              <button type="button" class="chip" data-v="2 a 4 anos">2 a 4 anos</button>
+              <button type="button" class="chip" data-v="5 a 7 anos">5 a 7 anos</button>
+              <button type="button" class="chip" data-v="8 a 12 anos">8 a 12 anos</button>
+              <button type="button" class="chip" data-v="13 a 17 anos">13 a 17 anos</button>
+              <button type="button" class="chip" data-v="18 a 39 anos">18 a 39 anos</button>
+              <button type="button" class="chip" data-v="40 anos ou mais">40+</button>
+            </div>
+          </div>
+          <div class="step" data-step="4">
+            <div class="q-label">Quarto passo</div>
+            <div class="q">Qual turno fica melhor?</div>
+            <div class="chips one" data-field="turno">
+              <button type="button" class="chip" data-v="Manhã">Manhã</button>
+              <button type="button" class="chip" data-v="Tarde">Tarde</button>
+              <button type="button" class="chip" data-v="Noite">Noite</button>
+            </div>
+          </div>
+          <div class="step" data-step="5">
+            <div class="q-label">A grande reverência</div>
+            <div class="q">Como falamos com você?</div>
+            <div class="summary" id="summary"></div>
+            <label class="field"><span>Seu nome</span><input id="nome" name="nome" autocomplete="name" placeholder="Nome e sobrenome"></label>
+            <label class="field"><span>WhatsApp</span><input id="whats" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(85) 9 0000-0000"></label>
+            <label class="field" id="f-aluno" hidden><span>Nome da criança</span><input id="aluno" name="aluno" placeholder="Nome da criança"></label>
+            <button type="submit" class="btn" id="send">Quero minha aula experimental</button>
+            <div class="note">A equipe da Baillart chama você no WhatsApp para combinar dia e horário.</div>
+          </div>
+          <div class="step" data-step="6">
+            <div class="done">
+              <div class="check"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+              <h3>Cadastro enviado</h3>
+              <p id="done-msg">Agora é só enviar a mensagem no WhatsApp da Baillart para confirmar sua aula.</p>
+              <a class="btn green" id="wa-confirm" href="#" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.7 17.9L0 24l6.3-1.6A11.8 11.8 0 0 0 23.8 12c0-3.2-1.2-6.1-3.4-8.4z"/></svg> Enviar mensagem no WhatsApp</a>
+              <div class="note" id="redir">Abrindo o WhatsApp...</div>
+            </div>
+          </div>
+          <div class="nav" id="nav">
+            <button type="button" class="back-btn" id="back" hidden>Voltar</button>
+            <span class="count" id="count">1 de 5</span>
+          </div>
+        </form>
+      </section>
+
+      <div class="hours">
+        <a class="btn ghost" id="lnk-horarios" href="#" target="_blank" rel="noopener">
+          <span style="text-align:left">Horários das turmas<small>Receba a grade completa no WhatsApp</small></span>
+          <span class="wa-mini"><svg width="30" height="30" viewBox="0 0 24 24" fill="#25d366" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.7 17.9L0 24l6.3-1.6A11.8 11.8 0 0 0 23.8 12c0-3.2-1.2-6.1-3.4-8.4z"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- modalidades -->
+  <section class="sec">
+    <div class="title rv-in">
+      <div class="k">Escolha sua dança</div>
+      <div class="s">E venha experimentar</div>
+    </div>
+  </section>
+</main>
+
+<div class="stage" id="stage">
+  <div class="bigword" aria-hidden="true"><div class="track">Ballet Jazz Hip Hop Tap Ginástica Rítmica Ballet Jazz Hip Hop Tap Ginástica Rítmica&nbsp;</div></div>
+  <div class="carousel" id="carousel"><div class="mod"><div class="ph"><img src="img/hero-ballet.jpg" alt="Ballet na Baillart"></div><b>Ballet</b><small>Técnica e leveza</small></div><div class="mod"><div class="ph"><img src="img/jazz.jpg" alt="Jazz na Baillart"></div><b>Jazz</b><small>Energia e brilho</small></div><div class="mod"><div class="ph"><img src="img/hiphop.jpg" alt="Hip Hop na Baillart"></div><b>Hip Hop</b><small>Ritmo e atitude</small></div><div class="mod"><div class="ph"><img src="img/sapateado.jpg" alt="Tap na Baillart"></div><b>Tap</b><small>Música nos pés</small></div><div class="mod"><div class="ph"><img src="img/contemporaneo.jpg" alt="Ginástica Rítmica na Baillart"></div><b>Ginástica Rítmica</b><small>Força e graça</small></div><div class="mod"><div class="ph"><img src="img/turma-infantil.jpg" alt="Para os pequenos na Baillart"></div><b>Para os pequenos</b><small>A partir dos 2 anos</small></div><div class="mod" aria-hidden="true"><div class="ph"><img src="img/hero-ballet.jpg" alt="Ballet na Baillart"></div><b>Ballet</b><small>Técnica e leveza</small></div><div class="mod" aria-hidden="true"><div class="ph"><img src="img/jazz.jpg" alt="Jazz na Baillart"></div><b>Jazz</b><small>Energia e brilho</small></div><div class="mod" aria-hidden="true"><div class="ph"><img src="img/hiphop.jpg" alt="Hip Hop na Baillart"></div><b>Hip Hop</b><small>Ritmo e atitude</small></div><div class="mod" aria-hidden="true"><div class="ph"><img src="img/sapateado.jpg" alt="Tap na Baillart"></div><b>Tap</b><small>Música nos pés</small></div><div class="mod" aria-hidden="true"><div class="ph"><img src="img/contemporaneo.jpg" alt="Ginástica Rítmica na Baillart"></div><b>Ginástica Rítmica</b><small>Força e graça</small></div><div class="mod" aria-hidden="true"><div class="ph"><img src="img/turma-infantil.jpg" alt="Para os pequenos na Baillart"></div><b>Para os pequenos</b><small>A partir dos 2 anos</small></div></div>
+</div>
+
+<div class="container">
+  <section class="sec" id="depoimentos" hidden>
+    <div class="title rv-in">
+      <div class="k">Quem dança aqui</div>
+      <div class="s">Conta pra gente</div>
+      <p>Comentários reais do nosso Instagram</p>
+    </div>
+    <div class="reviews" id="reviews"></div>
+    <div class="dots" id="dots"></div>
+  </section>
+
+  <section class="finale rv-in">
+    <div class="piece">
+      <div class="pc duo"><img loading="lazy" src="img/duo.jpg" alt="Alunos da Baillart dançando"></div>
+      <div class="pc wall"><img loading="lazy" src="img/mural.jpg" alt="Mural da Baillart com a frase Somos feitos de arte"></div>
+      <div class="copy">
+        <img class="flr" src="img/flourish.png" alt="" aria-hidden="true">
+        <h2>Somos feitos de arte</h2>
+        <p>Uma academia de dança para todas as idades, onde cada passo é celebrado. Venha conhecer nosso espaço!</p>
+      </div>
+    </div>
+    <a class="btn" href="#agendar">Agendar aula experimental</a>
+  </section>
+
+  <section class="place rv-in" id="endereco">
+    <div class="map">
+      <iframe loading="lazy" title="Mapa: Baillart Academia de Dança" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Rua%20Monsenhor%20Ot%C3%A1vio%20de%20Castro%2C%20600%20-%20F%C3%A1tima%2C%20Fortaleza%20-%20CE%2C%2060050-150&z=16&output=embed"></iframe>
+    </div>
+    <div class="addr">
+      <div class="k">Venha nos visitar</div>
+      <address id="addr-text">Rua Monsenhor Otávio de Castro, 600 - Fátima<br>Fortaleza - CE, 60050-150</address>
+      <div class="row">
+        <button type="button" class="btn" id="copy">Copiar endereço</button>
+      </div>
+      <span class="copied" id="copied" role="status"></span>
+    </div>
+  </section>
+
+  <footer>
+    <svg class="ba " viewBox="288 148 504 806" aria-label="Baillart" role="img"><g class="lb"><use href="#pB" class="s2"/><use href="#pB" class="s1"/><use href="#pB" class="l"/></g><g class="la"><use href="#pA" class="s2"/><use href="#pA" class="s1"/><use href="#pA" class="l"/></g></svg>
+    <a class="ig" href="https://www.instagram.com/baillartacademia.ba/" target="_blank" rel="noopener">@baillartacademia.ba</a>
+  </footer>
+</div>
+<div class="orn bottom" aria-hidden="true"></div>
+
+<!-- WhatsApp flutuante -->
+<div class="wa" id="wa">
+  <div class="wa-menu" id="wa-menu">
+    <div class="h">Fale com a Baillart</div>
+    <a id="wa-duvida" href="#" target="_blank" rel="noopener">Tirar uma dúvida</a>
+    <a id="wa-horarios" href="#" target="_blank" rel="noopener">Horários das turmas</a>
+    <a href="#agendar" id="wa-agendar">Agendar aula experimental</a>
+  </div>
+  <button type="button" class="wa-btn" id="wa-btn" aria-label="Falar no WhatsApp" aria-expanded="false"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.7 17.9L0 24l6.3-1.6A11.8 11.8 0 0 0 23.8 12c0-3.2-1.2-6.1-3.4-8.4z"/></svg></button>
+</div>
+
+<!-- lembrete -->
+<div class="nudge" id="nudge" role="dialog" aria-label="Lembrete">
+  <svg class="ba " viewBox="288 148 504 806" aria-label="Baillart" role="img"><g class="lb"><use href="#pB" class="s2"/><use href="#pB" class="s1"/><use href="#pB" class="l"/></g><g class="la"><use href="#pA" class="s2"/><use href="#pA" class="s1"/><use href="#pA" class="l"/></g></svg>
+  <p><b>Psiu!</b>Que tal sentir o ritmo de perto?</p>
+  <a href="#agendar" id="nudge-go">Agendar</a>
+  <button type="button" class="x" id="nudge-x" aria-label="Fechar">×</button>
+</div>
+
+<script>
+/* ===================== CONFIGURAÇÃO ===================== */
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyRBW8sTM7mqHUnIkGnQXd_oJlBmEpr5JtzrNgT-xmZVV7J1uPK_33DspKB5OTDo0r0/exec';
+const WHATS = '558591364000';
+const DEPOIMENTOS = [
+  // { img: 'img/depoimentos/01.jpg', alt: 'Comentário de @usuario' },
+];
+/* ======================================================== */
+
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const store = { get(k){ try { return sessionStorage.getItem(k) } catch(e){ return null } }, set(k,v){ try { sessionStorage.setItem(k,v) } catch(e){} } };
+const data = { para:'', modalidade:'', idade:'', turno:'' };
+const TOTAL = 5;
+let cur = 1, preMod = false, sent = false;
+
+/* ---------- abertura ---------- */
+const intro = $('#intro');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+function startPage(){
+  document.body.classList.remove('loading');
+  document.body.classList.add('enter');
+  const hb = $('.hero .ba'); hb.classList.add('play');
+  setTimeout(() => { hb.classList.remove('play'); hb.classList.add('dance'); }, 1700);
+}
+if (reduce || store.get('ba_intro')) {
+  intro.classList.add('gone'); startPage();
+} else {
+  store.set('ba_intro','1');
+  intro.querySelector('.ba').classList.add('play');
+  const open = () => { if (intro.classList.contains('open')) return; intro.classList.add('open'); setTimeout(startPage, 250); setTimeout(() => intro.classList.add('gone'), 1100); };
+  setTimeout(open, 2100);
+  intro.addEventListener('click', open);
+}
+
+/* ---------- WhatsApp ---------- */
+const wa = msg => `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`;
+$('#wa-duvida').href = wa('Olá, Baillart! Vim pelo site e gostaria de tirar uma dúvida.');
+$('#wa-horarios').href = wa('Olá, Baillart! Vim pelo site e gostaria de receber os horários das turmas.');
+$('#lnk-horarios').href = $('#wa-horarios').href;
+$('#wa-btn').addEventListener('click', e => { e.stopPropagation(); const o = $('#wa').classList.toggle('open'); $('#wa-btn').setAttribute('aria-expanded', o); });
+document.addEventListener('click', e => { if (!e.target.closest('#wa')) $('#wa').classList.remove('open'); });
+$('#wa-agendar').addEventListener('click', () => $('#wa').classList.remove('open'));
+
+/* ---------- formulário ---------- */
+function go(n, backwards){
+  $$('.step').forEach(s => s.classList.remove('on','back'));
+  const el = $(`.step[data-step="${n}"]`);
+  el.classList.add('on'); if (backwards) el.classList.add('back');
+  cur = n;
+  $('#bar').style.width = n > TOTAL ? '100%' : ((n-1)/TOTAL*100 + 4) + '%';
+  $('#back').hidden = n === 1 || n > TOTAL;
+  $('#count').textContent = n > TOTAL ? '' : `${n} de ${TOTAL}`;
+  if (n === 3) $('#q-idade').textContent = data.para === 'Para mim' ? 'Qual a sua idade?' : 'Qual a idade da criança?';
+  if (n === 5) {
+    $('#summary').innerHTML = [data.modalidade, data.idade, data.turno].map(v => `<span>${v}</span>`).join('');
+    $('#f-aluno').hidden = data.para !== 'Para meu filho(a)';
+    if ($('#f-aluno').hidden) $('#aluno').value = '';
+  }
+}
+$$('.chips').forEach(group => group.addEventListener('click', e => {
+  const chip = e.target.closest('.chip'); if (!chip) return;
+  group.querySelectorAll('.chip').forEach(c => c.classList.remove('sel'));
+  chip.classList.add('sel');
+  data[group.dataset.field] = chip.dataset.v;
+  if (navigator.vibrate) navigator.vibrate(8);
+  setTimeout(() => go(cur === 1 && preMod ? 3 : cur + 1), 260);
+}));
+$('#back').addEventListener('click', () => go(cur === 3 && preMod ? 1 : cur - 1, true));
+
+$('#whats').addEventListener('input', e => {
+  const d = e.target.value.replace(/\D/g,'').slice(0,11);
+  let o = d;
+  if (d.length > 2) o = `(${d.slice(0,2)}) ${d.slice(2)}`;
+  if (d.length > 3) o = `(${d.slice(0,2)}) ${d.slice(2,3)} ${d.slice(3)}`;
+  if (d.length > 7) o = `(${d.slice(0,2)}) ${d.slice(2,3)} ${d.slice(3,7)}-${d.slice(7)}`;
+  e.target.value = o; e.target.classList.remove('err');
+});
+$('#nome').addEventListener('input', e => e.target.classList.remove('err'));
+function flag(el){ el.classList.add('err'); const p = el.parentElement; p.classList.remove('shake'); void p.offsetWidth; p.classList.add('shake'); }
+
+$('#form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const nome = $('#nome').value.trim(), fone = $('#whats').value.replace(/\D/g,'');
+  let ok = true;
+  if (nome.length < 2) { flag($('#nome')); ok = false; }
+  if (fone.length < 10) { flag($('#whats')); ok = false; }
+  if (!ok) return;
+  const btn = $('#send'); btn.disabled = true; btn.textContent = 'Enviando...';
+  const q = new URLSearchParams(location.search);
+  const payload = {
+    para: data.para, modalidade: data.modalidade, idade: data.idade, turno: data.turno,
+    nome, whatsapp: $('#whats').value, aluno: $('#aluno').value.trim(),
+    origem: q.get('utm_source') || (document.referrer ? new URL(document.referrer).hostname : 'Acesso direto / bio')
+  };
+  if (SCRIPT_URL.startsWith('http')) {
+    const body = new URLSearchParams(payload);
+    let ok = false;
+    try { ok = navigator.sendBeacon && navigator.sendBeacon(SCRIPT_URL, body); } catch(err) {}
+    if (!ok) { try { fetch(SCRIPT_URL, { method:'POST', mode:'no-cors', keepalive:true, body }); } catch(err) {} }
+  }
+  const linhas = [
+    'Olá, Baillart! Vim pelo site e acabei de fazer o cadastro para uma aula experimental.',
+    '',
+    `*Nome:* ${nome}`,
+    `*WhatsApp:* ${payload.whatsapp}`,
+    `*Aula para:* ${({'Para mim':'Mim','Para meu filho(a)':'Meu filho(a)','Para mim e meu filho(a)':'Mim e meu filho(a)'})[data.para] || data.para}`
+  ];
+  if (payload.aluno) linhas.push(`*Nome da criança:* ${payload.aluno}`);
+  linhas.push(`*Modalidade:* ${data.modalidade}`, `*Idade:* ${data.idade}`, `*Turno:* ${data.turno}`, '', 'Aguardo a confirmação do dia e horário!');
+  const link = wa(linhas.join('\n'));
+  $('#wa-confirm').href = link;
+  $('#done-msg').textContent = `Obrigado, ${nome.split(' ')[0]}! Agora é só enviar a mensagem no WhatsApp da Baillart. Ela já vai preenchida com suas respostas.`;
+  sent = true; hideNudge();
+  go(6); confetti();
+  setTimeout(() => { $('#redir').textContent = 'Se o WhatsApp não abrir, toque no botão acima.'; location.href = link; }, 1800);
+  if (window.fbq) fbq('track','Lead');
+  if (window.gtag) gtag('event','generate_lead');
+});
+
+/* ---------- depoimentos ---------- */
+if (DEPOIMENTOS.length) {
+  $('#depoimentos').hidden = false;
+  const rv = $('#reviews');
+  rv.innerHTML = DEPOIMENTOS.map(d => `<figure class="rv"><img loading="lazy" src="${d.img}" alt="${d.alt || 'Depoimento'}"></figure>`).join('');
+  $('#dots').innerHTML = DEPOIMENTOS.map((_,i) => `<i class="${i ? '' : 'on'}"></i>`).join('');
+  rv.addEventListener('scroll', () => { const i = Math.round(rv.scrollLeft / (rv.firstElementChild.offsetWidth + 14)); $$('#dots i').forEach((d,k) => d.classList.toggle('on', k === i)); }, { passive:true });
+  const auto = setInterval(() => { const w = rv.firstElementChild.offsetWidth + 14; rv.scrollTo({ left: rv.scrollLeft + w >= rv.scrollWidth - rv.clientWidth - 4 ? 0 : rv.scrollLeft + w, behavior:'smooth' }); }, 4200);
+  ['touchstart','mouseenter'].forEach(ev => rv.addEventListener(ev, () => clearInterval(auto), { once:true }));
+}
+
+/* ---------- endereço ---------- */
+const ADDR = 'Rua Monsenhor Otávio de Castro, 600 - Fátima, Fortaleza - CE, 60050-150';
+$('#copy').addEventListener('click', async () => {
+  let ok = false;
+  try { await navigator.clipboard.writeText(ADDR); ok = true; } catch(e) {
+    const t = document.createElement('textarea'); t.value = ADDR; t.style.position = 'fixed'; t.style.opacity = 0; document.body.appendChild(t); t.select();
+    try { ok = document.execCommand('copy'); } catch(_) {} t.remove();
+  }
+  const c = $('#copied'); c.textContent = ok ? '' : ADDR; c.classList.add('on');
+  $('#copy').textContent = ok ? 'Endereço copiado ✓' : 'Copiar endereço';
+  $('#copy').classList.toggle('copied-ok', ok);
+  setTimeout(() => { c.classList.remove('on'); $('#copy').textContent = 'Copiar endereço'; $('#copy').classList.remove('copied-ok'); }, 2600);
+});
+
+/* ---------- lembrete discreto ---------- */
+let nudged = false;
+function hideNudge(){ $('#nudge').classList.remove('show'); }
+function showNudge(){
+  if (nudged || sent || cur > 1) return;
+  const r = $('#agendar').getBoundingClientRect();
+  if (r.bottom > 0 && r.top < innerHeight) return;
+  nudged = true; $('#nudge').classList.add('show'); setTimeout(hideNudge, 9000);
+}
+addEventListener('scroll', () => { if (scrollY > innerHeight * 1.2) showNudge(); }, { passive:true });
+$('#nudge-x').addEventListener('click', hideNudge);
+$('#nudge-go').addEventListener('click', hideNudge);
+
+/* ---------- revelar ao rolar ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } }), { threshold:.12 });
+$$('.rv-in').forEach(el => io.observe(el));
+
+/* ---------- confete ---------- */
+function confetti(){
+  if (reduce) return;
+  const c = document.createElement('canvas'); Object.assign(c.style,{position:'fixed',inset:0,pointerEvents:'none',zIndex:60});
+  c.width = innerWidth; c.height = innerHeight; document.body.appendChild(c);
+  const x = c.getContext('2d'), cols = ['#ff3d9a','#c0139b','#1d1d1d','#ffb3d6','#ffffff'];
+  const ps = Array.from({length:120}, () => ({ x:c.width/2, y:c.height*.45, vx:(Math.random()-.5)*15, vy:Math.random()*-14-4, s:Math.random()*7+4, r:Math.random()*6, vr:(Math.random()-.5)*.3, c:cols[Math.random()*cols.length|0] }));
+  let t = 0;
+  (function f(){ x.clearRect(0,0,c.width,c.height);
+    ps.forEach(p => { p.vy += .42; p.x += p.vx; p.y += p.vy; p.r += p.vr; x.save(); x.translate(p.x,p.y); x.rotate(p.r); x.fillStyle = p.c; x.fillRect(-p.s/2,-p.s/4,p.s,p.s/2); x.restore(); });
+    if (++t < 150) requestAnimationFrame(f); else c.remove(); })();
+}
+go(1);
+</script>
+</body>
+</html>
